@@ -1,4 +1,4 @@
-const displayElement = document.getElementById('display-text')
+const displayElement = document.getElementById('calculator-display')
 
 const addText = (text) => {
   if (validateInput(text)) {
@@ -11,8 +11,8 @@ const addText = (text) => {
 const validateInput = (input) => {
   const forbiddens = ['+', '-', '*', '/', '.']
   const displayText = displayElement.value
-  const symbolWithSymbol = forbiddens.includes(input) && forbiddens.includes(displayText[displayText.length-1])
-  const symbolWithoutNumber = forbiddens.includes(input) && displayText === ''
+  const symbolWithSymbol = forbiddens.includes(input) && forbiddens.includes(displayText[displayText.length - 1])
+  const symbolWithoutNumber = forbiddens.includes(input) && displayText === '' && input !== '-'
 
   return !(symbolWithSymbol || symbolWithoutNumber)
 }
@@ -25,7 +25,7 @@ const clearDisplay = () => {
   setDisplay('')
 }
 
-const deleteLastText = () => {
+const deleteLastCharacter = () => {
   const displayText = displayElement.value
   const newText = displayText.slice(0, displayText.length - 1)
   setDisplay(newText)

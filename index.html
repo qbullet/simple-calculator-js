@@ -4,91 +4,86 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CALCULATOR - By MAKEWEBBKK</title>
-  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <title>CALCULATOR</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <div class="calc-box">
+    <div class="calculator">
       <div class="display-container">
-        <input type="text" class="calc-input-display" id="display-text" />
+        <input type="text" class="calculator-display" id="calculator-display" readonly>
       </div>
-      <div class="button-container">
-        <div class="calc-row">
-          <div class="calc-button" onclick="addText('7')">
-            <p class="btn-text">7</p>
+      <div class="button-group">
+        <div class="button-row">
+          <div class="button-input" onclick="addText('7')">
+            <p class="button-text">7</p>
           </div>
-          <div class="calc-button" onclick="addText('8')">
-            <p class="btn-text">8</p>
+          <div class="button-input" onclick="addText('8')">
+            <p class="button-text">8</p>
           </div>
-          <div class="calc-button" onclick="addText('9')">
-            <p class="btn-text">9</p>
+          <div class="button-input" onclick="addText('9')">
+            <p class="button-text">9</p>
           </div>
-          <div class="calc-button" onclick="addText('/')">
-            <p class="btn-text">/</p>
-          </div>
-        </div>
-        <div class="calc-row">
-          <div class="calc-button" onclick="addText('4')">
-            <p class="btn-text">4</p>
-          </div>
-          <div class="calc-button" onclick="addText('5')">
-            <p class="btn-text">5</p>
-          </div>
-          <div class="calc-button" onclick="addText('6')">
-            <p class="btn-text">6</p>
-          </div>
-          <div class="calc-button" onclick="addText('*')">
-            <p class="btn-text">*</p>
+          <div class="button-input" onclick="addText('/')">
+            <p class="button-text">/</p>
           </div>
         </div>
-        <div class="calc-row">
-          <div class="calc-button" onclick="addText('1')">
-            <p class="btn-text">1</p>
+        <div class="button-row">
+          <div class="button-input" onclick="addText('4')">
+            <p class="button-text">4</p>
           </div>
-          <div class="calc-button" onclick="addText('2')">
-            <p class="btn-text">2</p>
+          <div class="button-input" onclick="addText('5')">
+            <p class="button-text">5</p>
           </div>
-          <div class="calc-button" onclick="addText('3')">
-            <p class="btn-text">3</p>
+          <div class="button-input" onclick="addText('6')">
+            <p class="button-text">6</p>
           </div>
-          <div class="calc-button" onclick="addText('-')">
-            <p class="btn-text">-</p>
-          </div>
-        </div>
-        <div class="calc-row">
-          <div class="calc-button large-button" onclick="addText('0')">
-            <p class="btn-text">0</p>
-          </div>
-          <div class="calc-button" onclick="addText('.')">
-            <p class="btn-text">.</p>
-          </div>
-          <div class="calc-button" onclick="addText('+')">
-            <p class="btn-text">+</p>
+          <div class="button-input" onclick="addText('*')">
+            <p class="button-text">*</p>
           </div>
         </div>
-        <div class="calc-row">
-          <div class="calc-button large-button" onclick="clearDisplay()">
-            <p class="btn-text">CLEAR</p>
+        <div class="button-row">
+          <div class="button-input" onclick="addText('1')">
+            <p class="button-text">1</p>
           </div>
-          <div class="calc-button" onclick="deleteLastText()">
-            <p class="btn-text">DEL</p>
+          <div class="button-input" onclick="addText('2')">
+            <p class="button-text">2</p>
           </div>
-          <div class="calc-button" onclick="compute()">
-            <p class="btn-text">=</p>
+          <div class="button-input" onclick="addText('3')">
+            <p class="button-text">3</p>
+          </div>
+          <div class="button-input" onclick="addText('-')">
+            <p class="button-text">-</p>
+          </div>
+        </div>
+        <div class="button-row">
+          <div class="button-input large-button" onclick="addText('0')">
+            <p class="button-text">0</p>
+          </div>
+          <div class="button-input" onclick="addText('.')">
+            <p class="button-text">.</p>
+          </div>
+          <div class="button-input" onclick="addText('+')">
+            <p class="button-text">+</p>
+          </div>
+        </div>
+        <div class="button-row">
+          <div class="button-input large-button" onclick="clearDisplay()">
+            <p class="button-text">CLEAR</p>
+          </div>
+          <div class="button-input" onclick="deleteLastCharacter()">
+            <p class="button-text">DEL</p>
+          </div>
+          <div class="button-input" onclick="compute()">
+            <p class="button-text">=</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="copy-right">
-    <p>MAKEWEBBKK</p>
-  </div>
-
-  <script src="scripts/index.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
